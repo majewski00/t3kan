@@ -1,0 +1,8 @@
+ttt_type: mlp
+depth: 4
+dim: 128
+intermediate_size: 512
+n_heads: 8
+mini_batch_size: 16
+ttt_bias: True
+ttt_base_lr: 1.0

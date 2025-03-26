@@ -1,0 +1,32 @@
+# samples: 
+#   Number of samples to generate.
+# vocab_size: 
+#   Size of the vocabulary. Assumes that the vocabulary starts from 0.
+# seq_step: 
+#   Maximum difference between regular patterns in the sequence.
+# allow_descending: 
+#   Allow descending patterns in the sequence.
+# components_number: 
+#   Maximum number of joined sequences with different patterns.
+# pad_id: 
+#   Padding id to use for the dataset. If None, no padding will be used and the dataset will be of variable length.
+# seq_components_weights: 
+#   Exponential base for the probability of the number of components in the sequence. The higher the weight, the less probable to have more component
+# enhance: 
+#   Enhance the dataset by removing the last component in the sequence for each additional component. Less predictable data.
+# name: 
+#   Name of the dataset. If None, the dataset will be saved as dataset_{subscript}.
+
+defaults:
+  - _self_
+
+base:
+  samples: 1000
+  vocab_size: 128
+  pad_id: 0
+  seq_step: 4
+  allow_descending: false
+  components_number: 2
+  seq_components_weights: 3
+  enhance: true
+  name: null

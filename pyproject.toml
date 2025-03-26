@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "t3kan"
+version = "0.1.0"
+description = ""
+authors = ["Kacper Majewski <kacperj.majewski@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+generate-data = "t3kan.scripts.seq_dataset:main"
+train = "t3kan.scripts.train:main"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+matplotlib = "^3.10.1"
+numpy = "^2.2.4"
+torch = "^2.6.0"
+pandas = "^2.2.3"
+psutil = "^7.0.0"
+colorama = "^0.4.6"
+hydra-core = "^1.3.2"
+
+
+[tool.poetry.group.dev.dependencies]
+types-psutil = "^7.0.0.20250218"
+types-colorama = "^0.4.15.20240311"
+types-setuptools = "^76.0.0.20250313"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

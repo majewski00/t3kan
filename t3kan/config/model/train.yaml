@@ -1,0 +1,29 @@
+defaults:
+  - model: ../t3mlp.yaml
+  - _self_
+
+seed: 2
+device: cuda
+dataset_id: 2
+# visualize: False
+
+training:
+  batch_size: 16
+  epochs: 20
+  learning_rate: 1e-5
+  validation_split: 0.2
+  test_split: 0.1
+  optimizer: adamw
+  cycle_lr_optimizer: False
+  early_stopping: True
+  early_stopping_patience: 5
+  early_stopping_min_delta: 0.01
+
+logging:
+  logger_name: ttt_kan_training
+  level: INFO
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+  log_dir: logs
+  # Optional if you want to log to a file
+  log_file: train.log
+

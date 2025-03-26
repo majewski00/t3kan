@@ -1,0 +1,6 @@
+.idea
+__pycache__/
+
+seq_dataset/
+outputs/
+logs/
